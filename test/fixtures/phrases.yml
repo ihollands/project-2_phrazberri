@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyString
+  fig_trans: MyString
+  lit_trans: MyString
+  context: MyString
+  pronunciation: MyString
+
+two:
+  body: MyString
+  fig_trans: MyString
+  lit_trans: MyString
+  context: MyString
+  pronunciation: MyString
