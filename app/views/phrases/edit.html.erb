@@ -1,3 +1,6 @@
+<a href="/languages"><h1>Phr&amacr;zi</h1></a>
+
+
 <h1>Idiom Update</h1>
 
 <%= form_for [@language, @phrase] do |f| %>
@@ -16,5 +19,5 @@
  <%= f.label :context %><br>
  <%= f.text_area :context, size: "40x3" %><br>
 
-  <%= f.submit "Update"%>
+  <%= f.submit "Save"%>
 <% end %>

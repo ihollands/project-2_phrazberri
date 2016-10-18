@@ -1,5 +1,12 @@
 <h1>Your Languages</h1>
 
 <% @languages.each do |language| %>
-  <h2 class="language"><%= link_to "#{language.name}", language_path(language) %></h2>
+  <h2 class="language"><%= link_to "#{language.name}", language_path(language) %></h2><%= link_to "DELETE", language_path(language), method: :delete %>
+<% end %>
+
+<%= form_for @language do |f| %>
+ <%= f.label :new_language %><br>
+ <%= f.text_field :name %><br>
+
+  <%= f.submit "Add new language"%><br>
 <% end %>

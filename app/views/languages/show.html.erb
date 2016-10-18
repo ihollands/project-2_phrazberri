@@ -1,10 +1,12 @@
+<a href="/languages"><h1>Phr&amacr;zberri</h1></a>
+
 <h1>Your <%= @language.name %> Idioms</h1>
 
 <%= link_to "New Idiom", new_language_phrase_path(@language) %>
 
 <ol>
 <% @phrases.each do |phrase| %>
-  <li><h3>Idiom <%= link_to "[Edit]", edit_language_phrase_path(@language, phrase) %></h3>
+  <li><h3>Idiom <%= link_to "[Edit]", edit_language_phrase_path(@language, phrase) %> <%= link_to "[Delete]", language_phrase_path(@language, phrase), method: :delete %></h3>
       <p><%= phrase.body %></p>
       <h3>Pronunciation</h3>
       <p><%= phrase.pronunciation %></p>

@@ -23,8 +23,16 @@ class PhrasesController < ApplicationController
     redirect_to language_path(@language)
   end
 
+  def destroy
+    @language = Language.find(params[:language_id])
+    @phrase = Phrase.find(params[:id])
+    @phrase.destroy
+    redirect_to language_path(@language)
+  end
+
   private
   def phrase_params
     params.require(:phrase).permit(:body, :context, :pronunciation, :lit_trans, :fig_trans, :language_id)
   end
+
 end
