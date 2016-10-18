@@ -20,3 +20,4 @@ Phrase.create!(body: "body test 1", fig_trans: "fig_trans test 1", lit_trans: "l
 Phrase.create!(body: "body test 2", fig_trans: "fig_trans test 2", lit_trans: "lit_trans test 2", context: "context test 2", pronunciation: "pronunciation test 2", language_id: 2)
 Phrase.create!(body: "body test 3", fig_trans: "fig_trans test 3", lit_trans: "lit_trans test 3", context: "context test 3", pronunciation: "pronunciation test 3", language_id: 3)
 Phrase.create!(body: "body test 4", fig_trans: "fig_trans test 4", lit_trans: "lit_trans test 4", context: "context test 4", pronunciation: "pronunciation test 4", language_id: 4)
+Phrase.create!(body: "body test 5", fig_trans: "fig_trans test 5", lit_trans: "lit_trans test 5", context: "context test 5", pronunciation: "pronunciation test 5", language_id: 1)
