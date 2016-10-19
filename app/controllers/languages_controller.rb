@@ -8,7 +8,7 @@ class LanguagesController < ApplicationController
   end
 
   def create
-    @language = Language.create!(language_params)
+    @language = Language.create!(language_params.merge(user: current_user))
     redirect_to languages_path
   end
 
