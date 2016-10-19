@@ -1,14 +1,15 @@
 <% if current_user %>
+<div class="inside">
 <h2>Your Languages</h2>
-
 <% @languages.each do |language| %>
-  <h3 class="language"><%= link_to "#{language.name}", language_path(language) %></h3><%= link_to "DELETE", language_path(language), method: :delete, class: "crud_button" %>
+  <h3 class="language"><%= link_to "#{language.name}", language_path(language) %> <%= link_to "[DELETE]", language_path(language), method: :delete, class: "crud_link" %></h3>
 <% end %>
 
 <%= form_for @language do |f| %>
- <%= f.label :new_language %><br>
+ <%= f.label :add_a_language %><br>
  <%= f.text_field :name, placeholder: 'Ex.\'French\', \'Русский\', etc.'%><br>
 
-  <%= f.submit "Add new language"%><br>
+  <%= f.submit "Add language", class: "button"%><br>
 <% end %>
 <% end %>
+</div>
