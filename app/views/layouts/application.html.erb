@@ -2,25 +2,27 @@
 <html>
   <head>
     <title>Phr&amacr;zberri</title>
+    <link href="https://fonts.googleapis.com/css?family=Alef|Pacifico|PT+Mono|Permanent+Marker|Quicksand|Scheherazade" rel="stylesheet">
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <% if !current_user %>
+    <h1 class="title">Phrazberri</h1>
+    <h3>Because knowing idioms is berry important!</h3>
       <%= link_to "Sign up", new_user_registration_path %>
       <%= link_to "Sign in", new_user_session_path %>
     <% else %>
-      <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-        <%= current_user.email %>
+    <a href="/languages" id="title_link"><h2 class="title">Phrazberri</h2></a>
+    <p>Signed in as <span><%= current_user.email %></span> | <%= link_to "Sign out", destroy_user_session_path, :method => :delete %></p>
     <% end %>
+
+    <%= yield %>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
-
 
   </body>
 </html>

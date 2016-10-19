@@ -12,8 +12,49 @@
  *
  *= require_tree .
  *= require_self
+
+ font-family: 'Pacifico', cursive;
+ font-family: 'Quicksand', sans-serif;
+ font-family: 'Scheherazade', serif;
+ font-family: 'Alef', sans-serif;
+ font-family: 'PT Mono', monospace;
+
  */
 
  html, body {
    background-color: #C5C1C0;
+   font-family: 'Quicksand','Scheherazade','Alef','PT Mono', sans-serif;
+ }
+
+ input[type=text] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color:teal;
+    color:white;
+}
+
+ .title {
+   font-family: 'Pacifico', cursive;
+   font-size: 6em;
+   margin:0;
+   padding:0;
+ }
+
+ .crud_button {
+   
+ }
+
+ .alert {
+   color:darkred;
+ }
+
+ .notice {
+   color:lightgreen;
+ }
+
+ #title_link {
+  font-size:.3em;
  }

@@ -1,6 +1,7 @@
 class LanguagesController < ApplicationController
+
   def index
-    @languages = Language.all
+    @languages = Language.where(user_id: current_user)
     @language = Language.new
   end
 

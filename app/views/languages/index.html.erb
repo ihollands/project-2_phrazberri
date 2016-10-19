@@ -1,16 +1,13 @@
-
-<% if !current_user %>
-  <%= yield %>
-<% else %>
-<h1>Your Languages</h1>
+<% if current_user %>
+<h2>Your Languages</h2>
 
 <% @languages.each do |language| %>
-  <h2 class="language"><%= link_to "#{language.name}", language_path(language) %></h2><%= link_to "DELETE", language_path(language), method: :delete %>
+  <h3 class="language"><%= link_to "#{language.name}", language_path(language) %></h3><%= link_to "DELETE", language_path(language), method: :delete, class: "crud_button" %>
 <% end %>
 
 <%= form_for @language do |f| %>
  <%= f.label :new_language %><br>
- <%= f.text_field :name %><br>
+ <%= f.text_field :name, placeholder: 'Ex.\'French\', \'Русский\', etc.'%><br>
 
   <%= f.submit "Add new language"%><br>
 <% end %>
