@@ -1,0 +1,30 @@
+<div class="inside" id="show_phrase">
+
+<table>
+  <caption><h3><%= @phrase.body %></h3>
+</caption>
+	<tbody>
+		<tr>
+		<th scope="row">Pronunciation</th>
+		<td><%= @phrase.pronunciation %></td>
+		</tr>
+    <tr>
+		<th scope="row">English Meaning</th>
+		<td><%= @phrase.fig_trans %></td>
+		</tr>
+    <tr>
+		<th scope="row">Literal Translation</th>
+		<td><%= @phrase.lit_trans %></td>
+		</tr>
+    <tr>
+		<th scope="row">Context</th>
+		<td><%= @phrase.context %></td>
+		</tr>
+	</tbody>
+</table>
+
+<p><%= link_to "[Edit]", edit_language_phrase_path(@language, @phrase) %> or <%= link_to "[Delete]", language_phrase_path(@language, @phrase), method: :delete %> this idiom</p>
+
+<a href="/languages/<%=@language.id%>">&#8678; <%= @language.name %> idioms</a>
+
+</div>

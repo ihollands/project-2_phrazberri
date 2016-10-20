@@ -36,6 +36,20 @@ body {
   margin:0;
  }
 
+ h2 {
+   font-size: 2em;
+   text-decoration: underline;
+ }
+
+ h3 {
+   margin: 0 0 30px 0;
+   font-size: 1.5em;
+ }
+
+ h4 {
+   font-size: 1.2em;
+ }
+
 input[type=text], input[type=password], input[type=email] {
     width: 40%;
     padding: 12px 20px;
@@ -45,7 +59,7 @@ input[type=text], input[type=password], input[type=email] {
     color:white;
 }
 
-input[type=button] {
+/*input[type=button] {
    border: none;
    color: white;
    padding: 15px 32px;
@@ -53,14 +67,30 @@ input[type=button] {
    text-decoration: none;
    display: inline-block;
    font-size: 16px;
+}*/
+
+input.button {
+   text-decoration: none;
+   text-align: center;
+   font-size:.8em;
+   color:white;
+   padding: 5px 10px;
+   background-color: #1A2930;
+   margin:10px;
+   border: 1px solid white;
+}
+input.button:hover {
+  color:#8E031C;
+  border: 1px solid #8E031C;
 }
 
 a {
   text-decoration:none;
+  color: white;
 }
 
 a:hover {
-  color: #1A2930;
+  color: #8E031C;
 }
 
 header {
@@ -74,8 +104,27 @@ div.top {
 }
 
 div.inside {
-  background-color: rgba(10,22,18,.98);
+  background-color: rgba(26,41,48,.99);
   padding:20px;
+  border-top: 2px solid white;
+}
+
+table {
+  width:50%;
+}
+
+th {
+  color: #8E031C;
+  text-align:right;
+  font-size: 2em;
+  padding:10px;
+}
+
+td {
+  color: white;
+  text-align:left;
+  font-size: 1em;
+  padding: 10px;
 }
 
 .user_link:hover {
@@ -99,11 +148,6 @@ div.inside {
    color:#8e031c;
  }
 
- h3 {
-   margin: 0 0 30px 0;
-   font-size: 2em;
- }
-
  .crud_link {
   display:inline-block;
   color:white;
@@ -112,10 +156,16 @@ div.inside {
 
  .alert {
    color: #8e031c;
+   font-size:1.5em;
  }
 
  .notice {
    color:#8e031c;
+   font-size: 1.5em;
+ }
+
+ .field {
+   margin: 5px 0 5px 0;
  }
 
  #title_link {
@@ -128,4 +178,9 @@ div.inside {
 
  #berry {
    color: #8e031c;
+ }
+ #show_phrase {
+   display:flex;
+   justify-content: center;
+   flex-direction: column;
  }

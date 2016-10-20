@@ -1,3 +1,5 @@
+<div class="inside">
+
 <h2>Create a new <%= @language.name %> idiom</h2>
 
 <%= form_for [@language, @phrase] do |f| %>
@@ -10,3 +12,4 @@
   <%= f.submit "Update"%><br>
   <%= link_to "[CANCEL]", language_path(@language) %>
 <% end %>
+</div>

@@ -5,6 +5,11 @@ class PhrasesController < ApplicationController
     @phrase = Phrase.find(params[:id])
   end
 
+  def show
+    @language = Language.find(params[:language_id])
+    @phrase = Phrase.find(params[:id])
+  end
+
   def update
     @language = Language.find(params[:language_id])
     @phrase = Phrase.find(params[:id])

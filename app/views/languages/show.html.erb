@@ -1,18 +1,10 @@
-<h1>Your <%= @language.name %> Idioms</h1>
+<div class="inside">
+<h2>Your <%= @language.name %> Idioms</h2>
 
-<%= link_to "New Idiom", new_language_phrase_path(@language) %>
-
-<ol>
 <% @phrases.each do |phrase| %>
-  <li><h3>Idiom <%= link_to "[Edit]", edit_language_phrase_path(@language, phrase) %> <%= link_to "[Delete]", language_phrase_path(@language, phrase), method: :delete %></h3>
-      <p><%= phrase.body %></p>
-      <h3>Pronunciation</h3>
-      <p><%= phrase.pronunciation %></p>
-      <h3>Meaning</h3>
-      <p><%= phrase.fig_trans %></p>
-      <h3>Literal Translation</h3>
-      <p><%= phrase.lit_trans %></p>
-      <h3>Context</h3>
-      <p><%= phrase.context %></p></li>
+      <p><%= link_to phrase.body, language_phrase_path(@language, phrase) %></p>
 <% end %>
-</ol>
+
+<h4><%= link_to "New Idiom", new_language_phrase_path(@language) %></h4>
+
+</div>
