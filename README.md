@@ -1,3 +1,5 @@
+<!-- AM: No readme? This doc is super important to give other developers and potential employers an idea of what your project is all about. -->
+
 # README
 
 This README would normally document whatever steps are necessary to get the

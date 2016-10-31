@@ -1,3 +1,6 @@
+<!-- AM: +1 for customizing your Devise views -->
+<!-- AM: Also +1 for adding some security to your views to prevent non-users from interacting with your app. -->
+<!-- AM: I would also consider adding similar security to your controller actions (i.e., if user is not logged-in and tries to update something, they will be redirected) -->
 <% if current_user %>
 <div class="inside">
 <h2>Your Languages</h2>
@@ -13,3 +16,4 @@
 <% end %>
 <% end %>
 </div>
+<!-- AM: ^^ Indentation plz! ^^-->
