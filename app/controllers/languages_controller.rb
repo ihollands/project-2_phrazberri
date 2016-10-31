@@ -1,6 +1,7 @@
 class LanguagesController < ApplicationController
 
   def index
+    # AM: What happens if nobody's logged in?
     @languages = Language.where(user_id: current_user)
     @language = Language.new
   end
@@ -9,6 +10,7 @@ class LanguagesController < ApplicationController
   end
 
   def create
+    # AM: Again, what happens if there is no `current_user`?
     @language = Language.create!(language_params.merge(user: current_user))
     redirect_to languages_path
   end

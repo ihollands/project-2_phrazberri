@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  # AM: What's this? Did it come from running `rails scaffold`?
   get 'phrases/scaffold'
 
   get 'language/index'
