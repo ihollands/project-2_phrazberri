@@ -30,4 +30,4 @@ Good job on this project. Please let me know if you have any questions or commen
 
 ## Inline Code Comments
 
-[Take a look at my pull request for my inline code comments.](https://github.com/ihollands/project-2_phrazberri/pull/1)
+[Take a look at my pull request for my inline code comments.](https://github.com/ihollands/project-2_phrazberri/pull/1/files)
